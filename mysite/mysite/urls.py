@@ -20,7 +20,7 @@ from mysite.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^polls/', include('polls.urls')),
+    url(r'^polls/', include('polls.urls', namespace='polls')),
     url(r'^hello/$', hello ),
     url(r'^now/$', current_datetime ),
     url(r'^time/plus(\d{1,2})/$', datetimeplus ),
