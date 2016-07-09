@@ -29,6 +29,32 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")[:5]
 
+def index(request):
+    if request.session['user']:
+        latest_ques=Question.objects.order_by('-pub_date')[:5]
+        output=', '.join([p.question_text for p in latest_ques])
+        return render(request, 'polls/index.html', {'latest_question_list':latest_ques})
+
+    else:
+        return HttpResponse("You are not logged in")
+
+def detail(request, question_id):
+    if request.session['user']:
+        question=get_object_or_404(Question, pk=question_id)
+        return render(request, 'polls/detail.html', {'question':question})
+
+    else:
+        return HttpResponse("You are not logged in")
+
+def results(request, question_id):
+    if request.session['user']:
+        question = get_object_or_404(Question, pk=question_id)
+        return render(request, 'polls/results.html', {'question': question})
+
+    else:
+        return HttpResponse("You are not logged in")
+
+
 class DetailView(generic.DetailView):
     model=Question
     template_name='polls/detail.html'
