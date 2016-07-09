@@ -20,8 +20,8 @@ from mysite.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^polls/', include('polls.urls', namespace='polls')),
-    url(r'^hello/$', hello ),
+    url(r'^polls/', include('login.urls', namespace='poll')),
+    url(r'^mypollsapp', include('polls.urls', namespace='polls')),
     url(r'^now/$', current_datetime ),
     url(r'^time/plus(\d{1,2})/$', datetimeplus ),
 ]

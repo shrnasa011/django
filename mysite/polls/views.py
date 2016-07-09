@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404
 from polls.models import Question, Choice
 from django.core.urlresolvers import reverse
 from django.utils import timezone
-
+from django import forms
 from django.views import generic
 
 # Create your views here.
