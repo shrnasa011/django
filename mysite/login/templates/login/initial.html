@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+<form method="post">
+    {% csrf_token %}
+    {% if error_message %}<p><strong>{{ error_message}} </strong></p>{% endif %}
+
+    {{ form.as_p }}
+    <input type="submit" value="Login" />
+</form>
+<p id="demo"></p>
+<footer align="center">
+
+<form action={%url 'poll:signup' %} method="get">
+    {% csrf_token %}
+    <input type="submit" value="Create account?" />
+</form>
+
+
+</footer>

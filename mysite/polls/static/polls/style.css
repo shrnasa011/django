@@ -1,0 +1,98 @@
+header
+{
+    text-shadow: white 0.05em 0.05em 0.1em ;
+    
+    font-family:"Verdana";
+    text-align:left; 
+    
+    padding:15px;
+    color:rgb(160, 187, 10);
+}
+
+
+p
+{
+    font-size:30px;
+    font-family:"Monotype Corsiva";
+
+}
+
+li
+{
+    list-style:square;
+    color:white;
+    font-family:"Monotype Corsiva";
+
+}
+
+input[type=text], input[type=password]
+{
+    background-color: white;
+    border: black;
+    width:20%;
+    padding:10px;
+    margin: 5px 40px 5px 40px;
+    margin-right:40px;
+}
+
+li a
+{
+    color: #BDC3C7;
+    font-size: 25px;
+}
+
+a
+{
+    color:rgb(152, 122, 255);
+    font-size: 30px;
+}
+
+body 
+{
+    font-family:"Monotype Corsiva";
+    margin: 30px;
+    padding: 10px;
+    color: #BDC3C7;
+    font-size: 25px;
+    line-height:150%;
+    background: white url("images/background.jpg") no-repeat 
+center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 100%;
+}
+
+.logout
+{
+    position:relative;
+    right:20px;
+    padding:0px 40px;
+}
+
+label:hover, a:hover
+{
+  
+    color:rgb(206, 185, 0);
+    cursor:pointer;
+}
+
+input[type=submit]
+{
+    border-radius: 4px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+input[type=submit]:focus
+ {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}

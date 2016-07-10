@@ -1,0 +1,18 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+<header>
+<h1><strong>SIGN UP</strong></h1>
+</header>
+
+<form method="post">
+{%csrf_token %}
+{{form.as_p}}
+
+</br>
+<footer align="left" style="margin-left:25px" >
+<input type="submit" value= " Sign Up " >
+</footer>
+
+</form>

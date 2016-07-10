@@ -1,0 +1,23 @@
+<html lang="en">
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<header>
+<form action={%url 'poll:logout' %} method="post">
+    {%csrf_token%}
+    <div class="logout">
+    <input type="submit" style="float:right" value="Logout">
+    </div>
+</form>
+</header>
+
+{% block content %}{% endblock %}
+    
+</body>
+</html>
